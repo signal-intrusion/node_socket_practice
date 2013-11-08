@@ -1,0 +1,17 @@
+{
+  "name": "application-name",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "socket.io": "*"
+  },
+  "subdomain": "signal_intrusion-mydrawingapp",
+  "engines": {
+    "node": "0.10.x"
+  }
+}

@@ -1,0 +1,117 @@
+body {
+	background-color: #EEE;
+}
+
+button {
+	/* position: fixed; */
+    border : 0px;
+}
+
+.color {
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	display: block;
+}
+
+.color button {
+	display:block;
+	background: no-repeat;
+	padding: 0px;
+	margin: 0px;
+	width: 50px;
+	height: 50px;
+}
+
+.size {
+	position: absolute;
+	top: 169px;
+	left: 393px;
+	display: inline;
+}
+
+.size button {
+	padding: 0px;
+	margin: 0px;
+	width: 30px;
+	height: 30px;
+	opacity: 0;
+	border-radius:25px;
+	background-color: #34F;	
+	box-shadow: 0px 0px 10px #12D;
+	vertical-align: bottom;
+}
+
+.size li {
+	margin: 0px;
+}
+
+.tool {
+	position: absolute;
+	top: 67px;
+	left: 380px;
+}
+
+.tool button {
+	padding: 0px;
+	margin: 5px;
+	width:55px;
+	height: 33px;
+	display: block;
+	opacity: 0;
+	background-color: #34F;	
+	box-shadow: 0px 0px 10px #12D;
+	border-radius:5px;
+}
+
+li {
+	display: block;
+}
+
+#toolDisplay {
+	position: absolute;
+	width: 265px;
+	height: 198px;
+	top: 20px;
+	left: 120px;
+	/* background-color: rgba(0,0,0,.5) */
+	/* 
+background-color:#0F0;
+	background-image: url(images/marker-outline.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+ */
+}
+
+#toolDisplay img {
+	position: inherit;
+	width: 250px;
+	top: 30px;
+	right: 0px;
+}
+
+.highlight {
+	box-shadow: 0px 0px 15px #12D;
+}
+
+#chooseLarge {
+	margin-left: 4px;
+	height: 20px;
+	width: 20px;
+}
+
+#chooseNormal {
+	margin-left: 4px;
+	height: 15px;
+	width: 15px;
+}
+
+#chooseSmall {
+	margin-left: 4px;
+	height: 10px;
+	width: 10px;
+}
+
+.active {
+	opacity: 0.5 !important;
+}

@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  img(src='images/eraser-background.png')
+  ul.toolList
+      li
+        | Clear the canvas:
+        button#clearCanvas(type='button') Clear
+      li
+        | Set a background color:
+        input#colorPicker(type='color', value='FFF')
+      li
+        | Download your drawing:
+        button
+          a#saveImage(target='blank') Click to save
+      .color
+        li
+          button#purple(type='button') purple
+          button#green(type='button') green
+          button#yellow(type='button') yellow
+          button#brown(type='button') brown
+      .size
+        li
+          button#chooseHuge(type='button')
+          button#chooseLarge(type='button')
+          button#chooseNormal(type='button')
+          button#chooseSmall(type='button')
+      .tool
+        li
+          button#chooseMarker(type='button')
+          button#chooseEraser(type='button')
+    #toolDisplay
+      img(src='images/marker-outline.png')
+    #canvasDiv
+      canvas#canvas
+    script(type='text/javascript')
+      $(document).ready(function() {
+      prepareCanvas(); // despite the name, this is not a built-in function!
+      });

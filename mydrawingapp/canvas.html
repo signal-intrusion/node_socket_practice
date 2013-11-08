@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>HTML5 Canvas & jQuery Drawing App Example</title>
+    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    	<script type="text/javascript" src="canvas.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+   		<script>
+  			  var socket = io.connect('http://127.0.0.1:3000');
+  		</script> 
+		<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+  	</head>
+	<body style="background-color:#b0c4de">
+
+	<img src="images/eraser-background.png">
+    <ul class="toolList">
+        <li>Clear the canvas: <button id="clearCanvas" type="button">Clear</button></li>
+        <li>Set a background color: <input type="color" id="colorPicker" value="FFF" /></li>
+		<li>Download Your Drawing:<button><a id="saveImage" target="blank">Click to save</a></button></li>
+		<div class="color">
+			<li><button id="Purple" type="button">Purple</button>
+				<button id="Green" type="button">Green</button>
+				<button id="Yellow" type="button">Yellow</button>
+				<button id="Brown" type="button">Brown</button></li>
+		</div>
+		<div class="size">
+			<li><button id="chooseHuge" type="button"></button>
+				<button id="chooseLarge" type="button"></button>
+				<button id="chooseNormal" type="button"></button>
+				<button id="chooseSmall" type="button"></button>
+			</li>
+		</div>
+		<div  class="tool">
+			<li><button id="chooseMarker" type="button">Marker</button>
+				<button id="chooseEraser" type="button">Eraser</button></li>
+		</div>
+    </ul>
+	<div id="toolDisplay">
+		<img src="images/marker-outline.png">
+	</div>
+	<div id="canvasDiv"><canvas id="canvas"></canvas></div>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+    	 	prepareCanvas(); // despite the name, this is not a built-in function!
+		});
+	</script>
+  </body>
+</html>
